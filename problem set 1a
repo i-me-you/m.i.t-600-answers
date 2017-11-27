@@ -12,12 +12,15 @@ current_savings = 0
 num_of_months = 1
 portion_saved_monthly = annual_salary / 12 * portion_saved
 r = 0.04  #annual rate on investment
-increment = (current_savings * r / 12) + portion_saved_monthly
+#increment = (current_savings * r / 12) + portion_saved_monthly
 current_savings = current_savings + portion_saved_monthly
+
 while current_savings < portion_down_payment:
    current_savings += current_savings * r/12 + portion_saved_monthly
    num_of_months += 1
+
 print ("The number of months it'll take for 'your' savings to amount to the down payment of 'your' dream home is: ", num_of_months)
 print (current_savings)
-#ans complete tho i don't know why when i increase current savings with 'increment' it gives another value .....than the value it'll give when i increase current savings with the value of increment..
-#this is prolly because the 'current_savings' value in increment is lower than the new// current_savings ..
+
+
+#works like a bitch on drugs
